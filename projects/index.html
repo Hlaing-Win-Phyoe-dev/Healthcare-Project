@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<div class="loader-container">
+    <div class="loader"></div>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Healthcare</title>
+    <style>
+        .loader-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #56c596;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 2000;
+        }
+        .loader {
+            margin: 100px auto;
+            font-size: 25px;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            position: relative;
+            text-indent: -9999em;
+            -webkit-animation: load5 1.1s infinite ease;
+            animation: load5 1.1s infinite ease;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        @-webkit-keyframes load5 {
+            0%,
+            100% {
+                box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+            }
+            12.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+            }
+            25% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            37.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5), 2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            62.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5), 0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            75% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            87.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5), -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+            }
+        }
+        @keyframes load5 {
+            0%,
+            100% {
+                box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+            }
+            12.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+            }
+            25% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            37.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5), 2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            62.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5), 0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            75% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+            }
+            87.5% {
+                box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5), -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+            }
+        }
+    </style>
+
+    <meta name="description" content="Healthcare"/>
+    <meta name="keywords" content="health services, health, health management, medical services, dental services"/>
+    <meta name="author" content="MMS Developer Team"/>
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="Healthcare Project"/>
+    <meta property="og:image" content="img/site-ss-min.png"/>
+    <meta property="og:url" content="https://hwp2002website.000webhostapp.com/"/>
+    <meta property="og:site_name" content="Healthcare Project"/>
+    <meta property="og:descrption" content="For Human Health"/>
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container-fluid site-nav animated slideInDown">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="img/logo.png" class="site-logo" alt="">
+                            <h3 class="font-weight-bolder text-uppercase text-white m-3">
+                                Healthcare
+                            </h3>
+                        </div>
+                        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars fa-2x menu-icon"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#home">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#service">Services</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#about">About</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#doctor">Doctors</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#contact">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" href="#blog">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="home" class="container-fluid home">
+    <div class="row my-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center home-text">
+                <div class="col-12 my-5">
+                    <div class="my-3 wow fadeInUp text-left text-md-left ani-delay-1">
+                        <h1 class="text-white">Providing an Exceptional <br> Patient Experience</h1>
+                        <p class="text-white">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquid animi <br> consequuntur cum
+                            cumque distinctio eaque eos harum iste,libero <br> magn, suscipit.
+                        </p>
+                        <a href="#service" class=" btn btn-secondary wow fadeInUp ani-delay-2">View Services</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="service" class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-md-8">
+                    <div class="wow slideInLeft">
+                        <h1 class="font-weight-bolder">Our Special Services</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis et inventore <br> molestiae non obcaecati officiis quo unde. Adipisci aliquam
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 wow slideInRight">
+                    <a href="#" class="btn btn-outline-primary float-right btn-service">See All Services</a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card shadow my-5 doctor-card wow slideInLeft ani-delay-3" style="border-radius: 10px !important;">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="img/lb-test.png" class="mt-3 service" style="width: 70px" alt="">
+                            </div>
+                            <div class="my-5 text-center ">
+                                <h4 class="font-weight-bolder">Laboratory Tasks</h4>
+                                <p class="text-black-50 my-4">
+                                    Lorem ipsum dolor sit amet, consectetur ullam unde. Aperiam, ducimus, omnis. Inventore maiores, modi quidem ratione saepe sapiente.
+                                </p>
+                                <a href="#" class="text-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card shadow my-5 doctor-card wow slideInLeft ani-delay-2" style="border-radius: 10px !important;">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="img/check.png" class="mt-3 service" style="width: 70px" alt="">
+                            </div>
+                            <div class="my-5 text-center ">
+                                <h4 class="font-weight-bolder">Health Check</h4>
+                                <p class="text-black-50 my-4">
+                                    Lorem ipsum dolor sit amet, consectetur ullam unde. Aperiam, ducimus, omnis. Inventore maiores, modi quidem ratione saepe sapiente.
+                                </p>
+                                <a href="#" class="text-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card shadow my-5 doctor-card wow slideInLeft ani-delay-1" style="border-radius: 10px !important;">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="img/general.png" class="mt-3 service" style="width: 70px" alt="">
+                            </div>
+                            <div class="my-5 text-center ">
+                                <h4 class="font-weight-bolder">General Dentistry</h4>
+                                <p class="text-black-50 my-4">
+                                    Lorem ipsum dolor sit amet, consectetur ullam unde. Aperiam, ducimus, omnis. Inventore maiores, modi quidem ratione saepe sapiente.
+                                </p>
+                                <a href="#" class="text-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-12 col-md-8">
+                    <div class="my-5">
+                        <h1 class="font-weight-bolder wow fadeInUp">About Us</h1>
+                        <p class="my-4 wow fadeInUp ani-delay-1">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem, culpa debitis dicta dignissimos dolorum est fuga molestiae molestias mollitia nesciunt placeat quae quasi quis sint tenetur, veniam vero. Aut?A corporis ex explicabo minima numquam optio, suscipit temporibus unde. Magni quae, recusandae?
+                        </p>
+                        <p class="wow fadeInUp ani-delay-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos iste magni molestiae quos, repellat similique unde.
+                        </p>
+                        <a href="#" class="btn btn-primary wow fadeInUp ani-delay-3">Ger Started</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="about-img wow slideInRight">
+                        <img src="img/img.png" class="w-100" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="my-4 service-img wow slideInLeft">
+                        <img src="img/doctor-2.png" style="width: 350px" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="my-4">
+                        <h2 class="font-weight-bolder about-title wow slideInRight">Why Choose Us</h2>
+                        <p class="wow slideInRight ani-delay-1">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium consequatur corporis cumque dolor doloribus, enim ex facere impedit.
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center mb-4 wow slideInRight ani-delay-2">
+                            <img src="img/care.png" class="care-img mr-4" alt="">
+                            <div>
+                                <h5 class="font-weight-bolder">Intensive Care</h5>
+                                <p class="text-black-50 p-0 m-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur commodi, deleniti enim et excepturi.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center mb-4 wow slideInRight ani-delay-3">
+                            <img src="img/ambulance.png" class="care-img mr-4" alt="">
+                            <div>
+                                <h5 class="font-weight-bolder">Free Ambulance Car</h5>
+                                <p class="text-black-50 p-0 m-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur commodi, deleniti enim et excepturi.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center mb-4 wow slideInRight ani-delay-4">
+                            <img src="img/medical.png" class="care-img mr-4" alt="">
+                            <div>
+                                <h5 class="font-weight-bolder">Medical & Surgical</h5>
+                                <p class="text-black-50 p-0 m-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur commodi, deleniti enim et excepturi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="doctor" class="container-fluid">
+    <div class="row">
+        <di class="container">
+            <div class="row my-5">
+                <div class="col-12 col-md-9">
+                    <div class="my-5">
+                        <h1 class="font-weight-bolder wow bounceInUp">Our Special Doctors</h1>
+                        <p class="my-4 wow bounceInUp ani-delay-1">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem, culpa debitimolestias mollitia nesciunt placeat quae quasi quis sint
+                        </p>
+                    </div>
+                </div>
+                <div class="row slider">
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">David Vassilakis</p>
+                                <p class="text-center">Neurosurgeon</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp ani-delay-1" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor-2.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">Steve Jecob</p>
+                                <p class="text-center">Pathologist</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp ani-delay-2" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor-3.png" class="w-100 mb-3 img-card" style="height: 348px" alt="">
+                                <p class="font-weight-bolder m-0 text-center">Angellina Serzila</p>
+                                <p class="text-center">General Surgeon</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor-4.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">David Carlos</p>
+                                <p class="text-center">Orthopedic</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp ani-delay-1" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor-5.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">Lewis Gercia</p>
+                                <p class="text-center">Neurosurgeon</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp ani-delay-2" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor-6.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">John Vard</p>
+                                <p class="text-center">Otolaryngology Surgeon</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">Jakson</p>
+                                <p class="text-center">Vascular Surgeon</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp ani-delay-1" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor-4.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">Scarlett</p>
+                                <p class="text-center">Endocrine Surgeon</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow mb-5 doctor-card wow bounceInUp ani-delay-2" style="border-radius: 10px;position: relative">
+                            <div class="card-body">
+                                <img src="img/doctor-2.png" class="w-100 mb-3 img-card" alt="">
+                                <p class="font-weight-bolder m-0 text-center">David Vassilakis</p>
+                                <p class="text-center">Neurosurgeon</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-official facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-google google"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram instagram "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </di>
+    </div>
+</section>
+<section id="contact" class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-12">
+                    <div class="my-5 text-center wow slideInDown">
+                        <h1 class="font-weight-bolder">Get in Touch</h1>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow-lg form-container wow slideInLeft ani-delay-1" style="border-radius: 20px !important; height: 450px;">
+                        <div class="card-body">
+                            <h4 class="font-weight-bolder text-center my-3" style="color: var(--green)">Book Now</h4>
+                            <form action="" method="post">
+
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected disabled>Select Dr.</option>
+                                        <option value="1">Dr.Vassilakis</option>
+                                        <option value="2">Dr.Steve Jecob</option>
+                                        <option value="3">Dr.Angellina Serzila</option>
+                                        <option value="4">Dr.David Carlos</option>
+                                        <option value="5">Dr.John Vard</option>
+                                        <option value="6">Dr.Jakson</option>
+                                        <option value="7">Dr.Scarlett</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="mt-5">
+                                    <a href="#" class="btn btn-form btn-primary">Make an Appointment</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 map mt-md-4 mt-lg-0 wow slideInRight ani-delay-1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.835771480721!2d96.10173041442356!3d21.979265260026814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d0184e70a3b%3A0x624aff2eaf6cb890!2s550%20Bedded%20Children&#39;s%20Hospital%2C%20Mandalay!5e0!3m2!1sen!2smm!4v1608192942465!5m2!1sen!2smm" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <footer class="col-12 footer">
+            <div class="container">
+                <div class="row my-5">
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex align-items-center wow fadeInUp">
+                            <img src="img/logo.png" style="width: 50px; background: #fdfdfd; border-radius: 50%" alt="">
+                            <h4 class="ml-3 text-white font-weight-bolder">Healthcare</h4>
+                        </div>
+                        <div class="font-weight-light text-white mt-4">
+                            <a href="#" class="text-white mb-3 wow fadeInUp ani-delay-1">
+                                <i class="text-white fa fa-map-marker fa-fw"></i> Mandalay, Myanmar
+                            </a>
+                            <br>
+                            <a href="#" class="text-white mb-3 wow fadeInUp ani-delay-2">
+                                <i class="text-white fa fa-phone-square fa-fw"></i> 09787754879
+                            </a>
+                            <br>
+                            <a href="#" class="text-white mb-3 wow fadeInUp ani-delay-3">
+                                <i class="text-white fa fa-envelope fa-fw"></i> bloodbank.550chm@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <h4 class="font-weight-bolder text-white wow fadeInUp">Hospital Time</h4>
+                        </div>
+                        <div class="mt-5">
+                            <table class="text-white">
+                                <tr class="wow fadeInUp ani-delay-1">
+                                    <td style="width: 150px"> Monday - Friday</td>
+                                    <td>: 9:00 AM - 4:00 PM</td>
+                                </tr>
+                                <tr class="wow fadeInUp ani-delay-2">
+                                    <td>Saturday, Sunday & Holidays</td>
+                                    <td>: 9:00 AM - 1:00 PM</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="row bg-primary">
+        <div class="col-12">
+            <div class="text-white d-flex flex-column flex-lg-row justify-content-between mx-0 mx-md-5 pb-5">
+                <span class="mx-0 mx-md-5">© Copyright bloodbank. All Rights Reserved</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/wow/wow.js"></script>
+<script src="vendor/way_point/jquery.waypoints.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Healthcare Admin Dashboard/Add Patient</title>
+    <meta name="description" content="Healthcare"/>
+    <meta name="keywords" content="health services, health, health management, medical services, dental services"/>
+    <meta name="author" content="MMS Developer Team"/>
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="Healthcare Project"/>
+    <meta property="og:image" content="img/site-ss-min.png"/>
+    <meta property="og:url" content="https://hwp2002website.000webhostapp.com/"/>
+    <meta property="og:site_name" content="Healthcare Project"/>
+    <meta property="og:descrption" content="For Human Health"/>
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/data_table/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+</head>
+<body>
+<section class="main container-fluid">
+    <div class="row">
+        <!--        side-menu start-->
+        <div class="col-12 col-lg-3 col-xl-2 vh-100 sidebar px-0 py-3">
+            <div class="d-flex align-items-center justify-content-between nav-brand">
+                <div class="d-flex justify-content-center align-items-center font-weight-bolder text-uppercase text-center">
+                    <img src="img/logo.png" class="logo-img ml-4 mr-2" alt="">
+                    <p class="text-white mb-0 shadow">Health <span class="shadow text-primary" >Admin</span></p>
+                </div>
+                <div class="hide-sidebar-btn btn d-block d-lg-none">
+                    <i class="fa fa-close fa-2x text-primary"></i>
+                </div>
+            </div>
+            <div class="divider mt-3"></div>
+            <div class="nav-menu mt-3">
+                <div class="d-flex align-items-center bg-primary py-3">
+                    <div class="header-circle"></div>
+                    <img src="img/doctor.png" class="header-img mr-3" alt="">
+                    <p class="text-white m-0 p-0"><span style="color: black !important;">Welcome</span> <br><span class="text-white">Mr.Airi Satou</span></p>
+                </div>
+                <nav class="nav-menu mt-3">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="index.html" class="menu-item-link ">
+                                <span>
+                                    <i class="fa fa-dashboard text-primary"></i>
+                                    Dashboard
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-spacer"></li>
+                    </ul>
+                    <ul>
+                        <li class="menu-title">
+                            Doctors
+                        </li>
+                        <li class="menu-item">
+                            <a href="doctor_add.html" class="menu-item-link">
+                                <span>
+                                    <i class="fa fa-plus-circle text-primary"></i>
+                                    Add Doctor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="doctor_list.html" class="menu-item-link">
+                                <span>
+                                    <i class="fa fa-list text-primary"></i>
+                                    Doctors List
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-spacer"></li>
+                    </ul>
+                    <ul>
+                        <li class="menu-title">
+                            Patients
+                        </li>
+                        <li class="menu-item">
+                            <a href="patients_add.html" class="menu-item-link active">
+                                <span>
+                                    <i class="fa fa-plus-circle text-primary"></i>
+                                    Add Patients
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="patients_list.html" class="menu-item-link">
+                                <span>
+                                    <i class="fa fa-list text-primary"></i>
+                                    Patients List
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-spacer"></li>
+                    </ul>
+                    <ul>
+                        <li class="menu-title">
+                            Departments
+                        </li>
+                        <li class="menu-item">
+                            <a href="department_add.html" class="menu-item-link">
+                                <span>
+                                    <i class="fa fa-plus-circle text-primary"></i>
+                                    Add Departments
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="department_list.html" class="menu-item-link">
+                                <span>
+                                    <i class="fa fa-list text-primary"></i>
+                                    Departments List
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-spacer"></li>
+                    </ul>
+                    <ul>
+                        <li class="menu-title">
+                            General
+                        </li>
+                        <li class="menu-item">
+                            <a href="appointment.html" class="menu-item-link">
+                                <span>
+                                    <i class="fa fa-check-square-o text-primary"></i>
+                                    Appointments
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="report.html" class="menu-item-link">
+                                <span>
+                                    <i class="fa fa-file text-primary"></i>
+                                    Reports
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-spacer"></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <ul>
+                        <li class="menu-item mt-2">
+                            <a href="#" class="menu-item-link">
+                                <span class="text-danger">
+                                    <i class="fa fa-lock font-weight-bolder"></i>
+                                    LogOut
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <!--        side-menu end-->
+
+        <!--        content area start-->
+        <div class="col-12 col-lg-9 col-xl-10 vh-100 content">
+            <div class="row header">
+                <div class="col-12">
+                    <div class="p-2 rounded">
+                        <div class="float-left">
+                            <div class="show-sidebar-btn btn d-block d-lg-none">
+                                <i class="fa fa-tasks fa-2x text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center">
+                            <div class="p-3 header-noti">
+                                <img src="img/mail.svg" class="header-menu" alt="">
+                                <span class="mail-noti">5</span>
+                            </div>
+                            <div class="p-3 header-noti">
+                                <img src="img/bell.svg" class="header-menu" alt="">
+                                <span class="bell-noti">8</span>
+                            </div>
+                            <div class="p-3 header-noti">
+                                <img src="img/file.svg" class="header-menu" alt="">
+                                <span class="file-noti">9</span>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn border-0 dropdown-toggle text-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="img/doctor.png" class="user-img" alt="">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#"><i class="fa fa-lock text-danger mr-2"></i>Log out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row content-header animated slideInDown">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="">
+                            <img src="img/clipboards.svg" class="clipboard-img responsive-img" alt="">
+                            <h1 class="text-primary mb-0 d-inline-block ">Patients</h1>
+                            <small class="text-black-50 d-block ml-5" style="position: absolute;top: 45px;left: 25px;">Add Patient</small>
+                        </div>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb breadcrumb-container d-flex justify-content-center align-items-center mt-2">
+                                <i class="fa fa-home text-secondary"></i>
+                                <li class="breadcrumb-item"><a href="index.html" class="ml-2">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Add Patient</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-xl-8">
+                    <div class="card mb-4 animated fadeInUp ani-delay-2">
+                        <div class="" style="border-bottom: 1px solid #cababa;background: #f4f9f3;color: #505050 !important;">
+                            <a href="patients_list.html" class="btn btn-primary m-2"> <i class="fa fa-list text-white mr-2"></i>Patients List</a>
+                            <a href="#" class="btn btn-outline-primary expand-icon"><i class="fa fa-expand"></i></a>
+                        </div>
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="col-12 col-md-8 mb-5">
+                                    <div class="form-group m-3">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" name="name" id="fname" class="form-control" placeholder="Enter First Name" required>
+                                    </div>
+                                    <div class="form-group m-3">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" name="name" id="lname" class="form-control" placeholder="Enter Last Name" required>
+                                    </div>
+                                    <div class="form-group m-3">
+                                        <label for="upload">Picture Upload</label>
+                                        <input type="file" id="upload" class="form-control p-1">
+                                    </div>
+                                    <div class="form-group m-3">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="text" id="phone" class="form-control" placeholder="Enter Phone no." required>
+                                    </div>
+                                    <div class="form-group m-3">
+                                        <label for="dob">Date of Birth</label>
+                                        <input type="text" id="dob" class="form-control" placeholder="Date of Birth" required>
+                                    </div>
+                                    <div class="form-group m-3">
+                                        <label for="blood">Blood Group</label>
+                                        <select name="" id="blood" class="custom-select">
+                                            <option value="0">A+</option>
+                                            <option value="1">AB+</option>
+                                            <option value="2">B+</option>
+                                            <option value="3">O+</option>
+                                            <option value="4">A-</option>
+                                            <option value="4">AB-</option>
+                                            <option value="4">B-</option>
+                                            <option value="4">O-</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group m-3">
+                                        <label>Status</label><br>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="active" name="customRadioInline1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline1">Active</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="inactive" name="customRadioInline1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline2">Inactive</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group m-3">
+                                        <label>Sex</label><br>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline1">Male</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline2">Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-btn">
+                                        <a href="#" class="btn btn-warning">Reset</a>
+                                        <a href="#" class="btn btn-primary">Save</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="text-center">
+                    Copyright © 2020-2021. All rights reserved.
+                </p>
+            </div>
+        </div>
+        <!--        content are end-->
+    </div>
+</section>
+<script src="js/jquery.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/data_table/dataTables.bootstrap4.min.js"></script>
+<script src="vendor/wow/wow.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
